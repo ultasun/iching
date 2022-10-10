@@ -75,7 +75,7 @@ C        SPECIAL CASE
       DIST(1) = (9 - REVWAV(63)) - WAVE(64)
       DIST(64) = (9 - REVWAV(64)) - WAVE(63)
 C        REVWAV 62-2 ON PRINTOUT IS REALLY STORED AS 2-62.
-      DC 200 I=2,63
+      DO 200 I=2,63
       DIST(I) = (9 - REVWAV(   I)) - WAVE(I-1)
   200 CONTINUE
 C
