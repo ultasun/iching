@@ -7,8 +7,8 @@ Currenly, there is nothing which runs found in this repository.
 
 ### Barriers
 - The programs were originally written for a *CDC 6400* mainframe,
- - All files have a header which states:
-  - `RUN FORTRAN COMPILER VERSION 2.3 B.3`
+  - All files have a header which states:
+    - `RUN FORTRAN COMPILER VERSION 2.3 B.3`
 - All copies of the 1975 text print were flawed, the source code is nearly illegible.
 - The `WAVEC` subroutine was not included in the text, and does not appear to be a standard definition available anywhere.
 
