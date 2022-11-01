@@ -1,11 +1,15 @@
-# *Timewave* / *I Ching* 
+# *McKenna's Timewave*, and the *I Ching* 
 Appendix I (pages 201 to 207) and Appendix III (pages 223 to 227) from the 1975 print of *The Invisible Landscape* contained three *Fortran* programs, which appear to be of the *Fortran 66* dialect.
 
 The goal of this repository is to get these original *Fortran* programs updated to work with modern compilers.
 
 Currenly, there is nothing which runs found in this repository.
 
-### Barriers
+### File Layout
+- The original [*CDC 6400*](https://en.wikipedia.org/wiki/CDC_6000_series#The_6400) code is in the `originals/` directory and does not compile with any modern *Fortran* compiler as-is.
+- Code foud in the top-level of the repository should compile and eventually run.
+
+### Current Barriers
 - The programs were originally written for a *CDC 6400* mainframe,
   - All files have a header which states:
     - `RUN FORTRAN COMPILER VERSION 2.3 B.3`
@@ -26,7 +30,9 @@ After installing `gfortran`, they may be compiled like so:
 `gfortran -ffixed-form -fmax-identifier-length=7 ./test1.f`
 
 # Standards 
-The [*Fortran 66* standard](https://archive.org/details/ansi-x-3.9-1966-fortran-66/page/n7/mode/2up?view=theater) was inspired by *Fortran IV*.
+The [*Fortran 66* standard](https://archive.org/details/ansi-x-3.9-1966-fortran-66/page/n7/mode/2up?view=theater) was inspired by *Fortran IV*.  However, *Fortran* experts in *#fortran* on *Libera.chat* have noted that *"this is very old Fortran"*, and it is likely more specific to what was proper for the *CDC 6400* mainframe used by *McKenna* and his team during their era.
+
+In addition to studying *Fortran 66*, one may need to become familiar with the [very-specific dialect of *Fortran* used on the *CDC 6400* used by the author](https://www.google.com/search?q=cdc+6400+fortran).
 
 ### Column Numbers are *Minus One*
 Note that in the above [linked standard, section *3.2*](https://archive.org/details/ansi-x-3.9-1966-fortran-66/page/8/mode/2up?view=theater), talks about the first column as *Column 1*, but most modern text editors call this *Column 0*.
